@@ -1,0 +1,91 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3178c6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#235a97;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="busGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#68b5fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a9fd8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background rounded square -->
+  <rect width="200" height="200" rx="40" fill="url#bgGradient)"/>
+  
+  <!-- Event bus representation - central hub with radiating lines -->
+  <g id="eventbus">
+    <!-- Central hub circle -->
+    <circle cx="100" cy="100" r="18" fill="#fff" opacity="0.95"/>
+    
+    <!-- Event signals/pulses radiating out -->
+    <g stroke="url(#busGradient)" stroke-width="3" fill="none" opacity="0.8">
+      <!-- Top signal -->
+      <path d="M 100 82 L 100 45">
+        <animate attributeName="stroke-dasharray" values="0,37;37,0;0,37" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="100" cy="45" r="6" fill="url(#busGradient)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Top-right signal -->
+      <path d="M 113 87 L 140 60">
+        <animate attributeName="stroke-dasharray" values="0,38;38,0;0,38" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="140" cy="60" r="6" fill="url(#busGradient)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Right signal -->
+      <path d="M 118 100 L 155 100">
+        <animate attributeName="stroke-dasharray" values="0,37;37,0;0,37" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="155" cy="100" r="6" fill="url(#busGradient)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Bottom-right signal -->
+      <path d="M 113 113 L 140 140">
+        <animate attributeName="stroke-dasharray" values="0,38;38,0;0,38" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="140" cy="140" r="6" fill="url(#busGradient)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Bottom signal -->
+      <path d="M 100 118 L 100 155">
+        <animate attributeName="stroke-dasharray" values="0,37;37,0;0,37" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="100" cy="155" r="6" fill="url(#busGradient)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Bottom-left signal -->
+      <path d="M 87 113 L 60 140">
+        <animate attributeName="stroke-dasharray" values="0,38;38,0;0,38" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="60" cy="140" r="6" fill="url(#busGradient)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Left signal -->
+      <path d="M 82 100 L 45 100">
+        <animate attributeName="stroke-dasharray" values="0,37;37,0;0,37" dur="2s" begin="1.8s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="45" cy="100" r="6" fill="url(#busGradient)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.8s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Top-left signal -->
+      <path d="M 87 87 L 60 60">
+        <animate attributeName="stroke-dasharray" values="0,38;38,0;0,38" dur="2s" begin="2.1s" repeatCount="indefinite"/>
+      </path>
+      <circle cx="60" cy="60" r="6" fill="url(#busGradient)">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="2.1s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- TS text overlay -->
+  <text x="100" y="108" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#3178c6" text-anchor="middle">TS</text>
+</svg>
