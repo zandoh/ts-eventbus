@@ -1,9 +1,5 @@
 {
-  "recommendations": [
-    "biomejs.biome",
-    "editorconfig.editorconfig",
-    "vitest.explorer"
-  ],
+  "recommendations": ["biomejs.biome", "editorconfig.editorconfig", "vitest.explorer"],
   "unwantedRecommendations": [
     // These conflict with Biome
     "dbaeumer.vscode-eslint",
