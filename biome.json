@@ -46,7 +46,7 @@
       },
       "suspicious": {
         "recommended": true,
-        "noConsole": "warn",
+        "noConsole": "error",
         "noExplicitAny": "error"
       }
     }
@@ -73,22 +73,10 @@
   },
   "overrides": [
     {
-      "includes": ["*.test.ts", "*.spec.ts", "test/**", "tests/**", "examples/**"],
+      "includes": ["src/logger/**"],
       "linter": {
         "rules": {
           "suspicious": {
-            "noConsole": "off",
-            "noExplicitAny": "off"
-          }
-        }
-      }
-    },
-    {
-      "includes": ["src/types.ts", "src/eventbus.ts"],
-      "linter": {
-        "rules": {
-          "suspicious": {
-            "noExplicitAny": "off",
             "noConsole": "off"
           }
         }
