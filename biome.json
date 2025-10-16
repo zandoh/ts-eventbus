@@ -81,6 +81,26 @@
           }
         }
       }
+    },
+    {
+      "includes": ["playground/**"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noConsole": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["playground/src/**/*.css"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noUnknownAtRules": "off"
+          }
+        }
+      }
     }
   ]
 }
