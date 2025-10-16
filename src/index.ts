@@ -1,1 +1,8 @@
-export const otis = 'otis the package';
+export { createEventBus } from './eventbus/eventbus'
+export type { EventBus, EventBusConfig, EventMap } from './eventbus/eventbus.types'
+export type {
+  ListenerHandler,
+  ListenerInfo,
+  ListenerMap,
+  SubscribeOptions,
+} from './listener-store/listener-store.types'
